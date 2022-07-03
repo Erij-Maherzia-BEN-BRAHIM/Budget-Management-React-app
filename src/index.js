@@ -7,8 +7,8 @@ import AddDepenseContextProvider from './store/AddDepenseContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-<AddDepenseContextProvider>
-    <App />
+    <AddDepenseContextProvider>
+        <App />
     </AddDepenseContextProvider>
 );
 

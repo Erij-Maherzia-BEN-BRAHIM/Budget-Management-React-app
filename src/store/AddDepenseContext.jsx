@@ -8,17 +8,14 @@ function AddDepenseContextProvider(props) {
   const [tabDep, setTabDepenses] = useState([]);
   function ajoutNewDepense(newDepense) {
     setTabDepenses((prev) => {
-     return [...prev, newDepense];
+      return [...prev, newDepense];
     });
+    console.log(tabDep);
   }
-  const context={
+  const context = {
     tabDepenses: tabDep,
-    ajoutNewDepense:ajoutNewDepense,
-  }
-  return(
-    <addCtx.Provider value={context}>
-        {props.children}
-    </addCtx.Provider>
-  )
+    ajoutNewDepense: ajoutNewDepense,
+  };
+  return <addCtx.Provider value={context}>{props.children}</addCtx.Provider>;
 }
-export default AddDepenseContextProvider
+export default AddDepenseContextProvider;
