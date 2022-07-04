@@ -2,13 +2,11 @@ import React, { useContext, useRef } from "react";
 import { addCtx } from "../store/AddDepenseContext";
 import "./DepenseForm.css";
 import "./NewDepense.css";
-import { filterCtx } from './../store/FilterDateContext';
 export default function DepenseForm() {
   const ajoutCtx = useContext(addCtx);
   const refTitle = useRef("");
   const refAmount = useRef("");
   const refDate = useRef("");
-  const yearCtx = useContext(filterCtx)
 
   function submitHandler(e) {
     e.preventDefault();
